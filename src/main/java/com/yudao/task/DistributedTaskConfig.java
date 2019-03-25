@@ -1,6 +1,6 @@
 package com.yudao.task;
 
-import com.yudao.util.HostUtil;
+import com.yudao.task.util.HostUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.client.discovery.DiscoveryClient;

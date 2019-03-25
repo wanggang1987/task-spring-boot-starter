@@ -1,4 +1,4 @@
-package com.yudao.util;
+package com.yudao.task.util;
 
 import java.net.InetAddress;
 import java.net.NetworkInterface;
@@ -94,7 +94,7 @@ public class HostUtil {
     public static String getEnv(String envKey) {
         if (null != envKey && !"".equals(envKey)) {
             Map<String, String> map = System.getenv();
-            for (Iterator<String> itr = map.keySet().iterator(); itr.hasNext(); ) {
+            for (Iterator<String> itr = map.keySet().iterator(); itr.hasNext();) {
                 String key = itr.next();
                 if (envKey.equals(key)) {
                     return map.get(key);
@@ -105,3 +105,4 @@ public class HostUtil {
         return "";
     }
 }
+

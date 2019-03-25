@@ -2,7 +2,7 @@ package com.yudao.task;
 
 import com.netflix.appinfo.InstanceInfo;
 import com.netflix.appinfo.LeaseInfo;
-import com.yudao.util.HostUtil;
+import com.yudao.task.util.HostUtil;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.cloud.netflix.eureka.EurekaDiscoveryClient;
@@ -46,8 +46,8 @@ public class DistributedTask {
     }
 
     private boolean isSelfEarliestRegistered(List<ServiceInstance> instances) throws UnknownHostException {
-        EurekaDiscoveryClient.EurekaServiceInstance earliestInstance =
-                (EurekaDiscoveryClient.EurekaServiceInstance) instances.get(0);
+        EurekaDiscoveryClient.EurekaServiceInstance earliestInstance
+                = (EurekaDiscoveryClient.EurekaServiceInstance) instances.get(0);
         Long earliestTime = System.currentTimeMillis();
         for (ServiceInstance instance : instances) {
             EurekaDiscoveryClient.EurekaServiceInstance tmp = (EurekaDiscoveryClient.EurekaServiceInstance) instance;
@@ -70,3 +70,4 @@ public class DistributedTask {
         return false;
     }
 }
+

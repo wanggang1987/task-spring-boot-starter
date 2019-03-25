@@ -7,12 +7,10 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.core.annotation.Order;
 
-/**
- * 任务执行决策切面
- */
 @Order(1)
 @Aspect
 public class DistributedTaskAspect {
+
     static Logger logger = LoggerFactory.getLogger(DistributedTaskAspect.class);
     private DistributedTask distributedTask;
 
@@ -29,3 +27,5 @@ public class DistributedTaskAspect {
         }
     }
 }
+
+
