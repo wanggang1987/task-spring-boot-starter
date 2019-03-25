@@ -1,0 +1,9 @@
+**/nbaction*
+**/target
+**/mvnw
+**/mvnw.cmd
+**/logs
+.idea/
+**/*.iml
+**/*.log
+**/dependency-reduced-pom.xml
