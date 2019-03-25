@@ -21,7 +21,7 @@ public class DistributedTaskConfig {
 
     @Bean
     public DistributedTask connectionFactory() {
-        return new DistributedTask(serviceName, servicePort, HostUtil.getEnv("EUREKA_INSTANCE_IP_ADDRESS"), discoveryClient);
+        return new DistributedTask(serviceName, servicePort, HostUtil.getEnvIp(), discoveryClient);
     }
 
     @Bean

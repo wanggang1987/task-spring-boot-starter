@@ -91,7 +91,8 @@ public class HostUtil {
         return chooseAddress().getHostAddress();
     }
 
-    public static String getEnv(String envKey) {
+    public static String getEnvIp() {
+        String envKey = "EUREKA_INSTANCE_IP_ADDRESS";
         if (null != envKey && !"".equals(envKey)) {
             Map<String, String> map = System.getenv();
             for (Iterator<String> itr = map.keySet().iterator(); itr.hasNext();) {
@@ -105,4 +106,3 @@ public class HostUtil {
         return "";
     }
 }
-
